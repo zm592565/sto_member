@@ -93,9 +93,13 @@
 									format: 'YYYY-MM-DD',
 									language:'cn',
 									separator: " 至 ",
+									minDays:1,
+									maxDays:30,/*该参数定义日期范围的最大天数，如果设置为0，表示不限制最大天数。*/
+									singleDate:false,/*设置为true可以选择单个的日期。*/
 									showWeekNumbers : false, //是否显示第几周
 									startDate: '2017-05-26',/*日期选择的初始值*/
 									endDate: '2017-05-30',/*日期选择的初始值*/
+									autoClose: true,/*是否自动关闭选择框*/
 								
 								}).bind('datepicker-change', function(evt, obj) {
 									/*绑定事件变化*/
