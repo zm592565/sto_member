@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<title>收货地址簿</title>
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="lib/H-ui/css/H-ui.ie.css" />
+		<script type="text/javascript" src="lib/html5.js"></script>
+		<script type="text/javascript" src="lib/respond.min.js"></script>
+		<script type="text/javascript" src="lib/PIE_IE678.js"></script>
+		<![endif]-->   
+		<link rel="stylesheet" type="text/css" href="lib/H-ui/css/H-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/page/common.css" />
+		<script type="text/javascript" src="js/1.9.1/jquery.min.js" ></script>
+		<script type="text/javascript" src="lib/H-ui/js/H-ui.min.js" ></script>
+		<script type="text/javascript" src="lib/layer/layer.js" ></script>
+		<script type="text/javascript" src="lib/icheck/jquery.icheck.min.js" ></script>
+		<script type="text/javascript" src="js/page/updataPassword.js" ></script>
+		<link rel="stylesheet" href="lib/icheck/icheck.css" />
+		<script type="text/javascript">
+			$(function(){
+				$('.skin-minimal input').iCheck({
+					checkboxClass: 'icheckbox-blue',
+					radioClass: 'iradio-blue',
+					increaseArea: '20%'
+				});
+			});
+		</script>
+		<!--[if IE 6]>
+		<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+		<script>DD_belatedPNG.fix('*');</script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20 pb-30">
+			<div class="panel-header">
+				<span class="active">收货地址</span>
+				<span>发货地址</span>
+			</div>
+			
+			<div class="panel-body panel_body_block">
+				<div class="panel-title">新增收货地址</div>
+				<form class="form form-horizontal" id="form-article-add" novalidate="novalidate">
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>所在地区：</label>
+						<div class="formControls col-xs-9 col-sm-9">
+							<span class="select-box select_w_150">
+								<select name="articlecolumn" class="select">
+									<option value="0">请选择国家</option>
+								</select>
+							</span>
+							<span class="select-box select_w_150">
+								<select name="articlecolumn" class="select">
+									<option value="0">省份</option>
+								</select>
+							</span>
+							<span class="select-box select_w_150">
+								<select name="articlecolumn" class="select">
+									<option value="0">城市</option>
+								</select>
+							</span>
+						</div>
+					</div>
+					
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>详细地址：</label>
+						<div class="formControls col-xs-4 col-sm-5">
+							<textarea name="abstract" cols="" rows="" class="textarea" placeholder="请输入详细地址信息" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onkeyup="$.Huitextarealength(this,200)"></textarea>
+							<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+						</div>
+					</div>
+					
+					
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20">邮政编码：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" class="input-text select_w_150" value="" placeholder="邮政编码">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>收货人姓名：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" class="input-text select_w_150" value="" placeholder="">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>证件类型：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<span class="select-box select_w_150">
+								<select name="articlecolumn" class="select">
+									<option value="0">身份证</option>
+								</select>
+							</span>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>证件号码：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" class="input-text width_350" value="" placeholder="">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>手机号码：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" class="input-text width_80" value="" placeholder="+86">
+							<input type="text" class="input-text select_w_150" value="" placeholder="">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>E-mail：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" class="input-text width_200" value="" placeholder="">
+						</div>
+					</div>
+					
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"></label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<div class="skin-minimal">
+							  <div class="check-box" style="padding-top: 5px;">
+							    <input type="checkbox" id="checkbox-1">
+							    <label for="checkbox-1" style="font-size: 12px;">设置为默认收货地址</label>
+							  </div>
+							 </div>
+						</div>
+					</div>
+			
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"></label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<button class="btn btn-warning radius size-L" type="submit">保存信息</button>
+						</div>
+					</div>
+				</form>
+				<div class="panel-title">收货地址列表</div>
+				<table class="table table-border table-bordered table-bg table-hover">
+					<thead>
+						<tr>
+							<th>编号</th>
+							<th>收货人</th>
+							<th>所在地址</th>
+							<th>详细地址</th>
+							<th>邮编</th>
+							<th>手机</th>
+							<th>证件信息</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>
+								<button class="btn btn-danger radius size-MINI">删除</button>
+								<a href="#" class="btn btn-primary radius size-MINI">修改</a>
+							</td>
+						</tr>
+						<tr>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>
+								<button class="btn btn-danger radius size-MINI">删除</button>
+								<a href="#" class="btn btn-primary radius size-MINI">修改</a>
+							</td>
+						</tr>
+						<tr>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>
+								<button class="btn btn-danger radius size-MINI">删除</button>
+								<a href="#" class="btn btn-primary radius size-MINI">修改</a>
+							</td>
+						</tr>
+						<tr>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>
+								<button class="btn btn-danger radius size-MINI">删除</button>
+								<a href="http://www.163.com" class="btn btn-primary radius size-MINI">修改</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			
+			<div class="panel-body">
+				<div class="panel-title">新增发货地址</div>
+				<form class="form form-horizontal" id="form-article-add" novalidate="novalidate">
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>所在地区：</label>
+						<div class="formControls col-xs-9 col-sm-9">
+							<span class="select-box select_w_150">
+								<select name="articlecolumn" class="select">
+									<option value="0">请选择国家</option>
+								</select>
+							</span>
+							<span class="select-box select_w_150">
+								<select name="articlecolumn" class="select">
+									<option value="0">省份</option>
+								</select>
+							</span>
+							<span class="select-box select_w_150">
+								<select name="articlecolumn" class="select">
+									<option value="0">城市</option>
+								</select>
+							</span>
+						</div>
+					</div>
+					
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>详细地址：</label>
+						<div class="formControls col-xs-4 col-sm-5">
+							<textarea name="abstract" cols="" rows="" class="textarea" placeholder="请输入详细地址信息" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onkeyup="$.Huitextarealength(this,200)"></textarea>
+							<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+						</div>
+					</div>
+					
+					
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20">邮政编码：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" class="input-text select_w_150" value="" placeholder="邮政编码">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>收货人姓名：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" class="input-text select_w_150" value="" placeholder="">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>证件类型：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<span class="select-box select_w_150">
+								<select name="articlecolumn" class="select">
+									<option value="0">身份证</option>
+								</select>
+							</span>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>证件号码：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" class="input-text width_350" value="" placeholder="">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>手机号码：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" class="input-text width_80" value="" placeholder="+86">
+							<input type="text" class="input-text select_w_150" value="" placeholder="">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>E-mail：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" class="input-text width_200" value="" placeholder="">
+						</div>
+					</div>
+					
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"></label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<div class="skin-minimal">
+							  <div class="check-box" style="padding-top: 5px;">
+							    <input type="checkbox" id="checkbox-1">
+							    <label for="checkbox-1" style="font-size: 12px;">设置为默认收货地址</label>
+							  </div>
+							 </div>
+						</div>
+					</div>
+			
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"></label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<button class="btn btn-warning radius size-L" type="submit">保存信息</button>
+						</div>
+					</div>
+				</form>
+				<div class="panel-title">发货地址列表</div>
+				<table class="table table-border table-bordered table-bg table-hover">
+					<thead>
+						<tr>
+							<th>编号</th>
+							<th>收货人</th>
+							<th>所在地址</th>
+							<th>详细地址</th>
+							<th>邮编</th>
+							<th>手机</th>
+							<th>证件信息</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>
+								<button class="btn btn-danger radius size-MINI">删除</button>
+								<a href="edit_adress.html" class="btn btn-primary radius size-MINI">修改</a>
+							</td>
+						</tr>
+						<tr>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>
+								<button class="btn btn-danger radius size-MINI">删除</button>
+								<a href="edit_adress.html" class="btn btn-primary radius size-MINI">修改</a>
+							</td>
+						</tr>
+						<tr>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>
+								<button class="btn btn-danger radius size-MINI">删除</button>
+								<a href="edit_adress.html" class="btn btn-primary radius size-MINI">修改</a>
+							</td>
+						</tr>
+						<tr>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>收货人</td>
+							<td>编号</td>
+							<td>
+								<button class="btn btn-danger radius size-MINI">删除</button>
+								<a href="edit_adress.html" class="btn btn-primary radius size-MINI">修改</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<!--
+            	作者：344822559@qq.com
+            	时间：2017-02-08
+            	描述：收货地址簿
+            -->
+			
+		</div>
+	</body>
+</html>

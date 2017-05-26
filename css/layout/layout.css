@@ -1,0 +1,521 @@
+@charset "utf-8";
+
+/*
+ * 项目名称：申通网点查询和教学中心布局样式表
+ * 开发日期：2016-12-28
+ * 开发人员：344822559@qq.com
+ * */
+
+
+/*导航滚动条*/
+
+
+/*凹槽宽度*/
+#scrollbar::scrollbar-face-color{
+	background-color: #b46868;
+}
+#scrollbar::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+/*拖动条*/
+
+#scrollbar::-webkit-scrollbar-thumb {
+	background-color: #8a8a8a;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+}
+
+
+/*背景槽*/
+#scrollbar::-webkit-scrollbar-track {
+	background-color: '';
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+}
+
+
+#content {
+	padding: 0px 0px 0px 200px;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.left {
+	height: 100%;
+	width: 200px;
+	float: left;
+	margin-left: -200px;
+	background: #3e4144;
+	position: relative;
+	clear: both;
+}
+
+.left .logo {
+	width: 100%;
+	height: 60px;
+	display: block;
+	background: url(../../img/logo.png) no-repeat 20px center #4d5155;
+	background-size: auto 40px;
+}
+
+.left .logo .slide_left {
+	background: url(../../img/icon_slide_left.png) no-repeat center;
+	width: 20px;
+	height: 60px;
+	cursor: pointer;
+	float: right;
+	margin-right: 20px
+}
+
+.left .nav_box {
+	overflow: hidden;
+	display: none;
+	overflow-y: auto;
+}
+
+.left .nav_box_block {
+	display: block;
+}
+
+.left .nav {
+	width: 100%;
+	clear: both;
+	overflow: hidden;
+}
+
+.left .nav p {
+	height: 50px;
+	margin: 0px;
+}
+
+.left .nav p.net {
+	height: 50px;
+	background: url(../../img/icon/icon_net.png) no-repeat 20px center;
+	background-color: #494c50;
+	margin: 0px;
+}
+
+.left .nav p.person {
+	height: 50px;
+	background: url(../../img/icon/icon_person.png) no-repeat 20px center;
+	background-color: #494c50;
+	margin: 0px;
+}
+
+.left .nav p.kehu {
+	height: 50px;
+	background: url(../../img/icon/icon_kehu.png) no-repeat 20px center;
+	background-color: #494c50;
+	margin: 0px;
+}
+
+.left .nav p a {
+	display: block;
+	line-height: 50px;
+	height: 50px;
+	text-align: left;
+	padding-left: 45px;
+	color: #bcbbbb;
+	font-size: 15px;
+	text-decoration: none;
+	background: url(../../img/icon/icon_down_left_nomre.png) no-repeat 170px center;
+}
+
+.left .nav p a.active {
+	background: url(../../img/icon/icon_down_left.png) no-repeat 170px center;
+}
+
+
+/*.left .nav p:hover{
+	background-color: #F68657;
+	color: white;
+}*/
+
+.left .nav ul {
+	display: none;
+	padding: 0px 0px;
+}
+
+.left .nav ul.active {
+	display: block;
+}
+
+.left .nav ul a {
+	line-height: 35px;
+	/*height: 35px;*/
+	text-decoration: none;
+	display: block;
+	color: #9e9d9d;
+	text-align: left;
+	padding-left: 45px;
+	font-size: 14px;
+}
+
+.left .nav ul a.active {
+	background: url(../../img/nav_hover.jpg) repeat-y right #ff8e61;
+	color: white;
+}
+
+
+/*三级分类*/
+
+.left .nav ul a p {
+	color: white;
+}
+
+.left .nav ul a ul {
+	display: block;
+}
+
+.left .nav ul a ul li {
+	display: block;
+	color: red;
+	line-height: 30px;
+	height: 30px;
+}
+
+.left .btn_tel {
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -76px;
+	bottom: 30px;
+}
+
+.right {
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+.right .show_iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+}
+
+.right .show_iframe .top_tab{
+	height: 45px;
+	/*border-top: 1px solid #eee;*/
+	/*background: #f26d2e url(../../img/header_bj.jpg) repeat-x top;*/
+	/*box-shadow: 0px 2px 3px #f2f2f2;*/
+	background: #f38261;
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	right: 0px;
+	padding-left: 20px;
+	padding-right: 74px;
+	z-index: 999;
+	overflow: hidden;
+}
+
+
+.right .show_iframe .top_tab div.tab_home{
+	position: absolute;
+	left: 20px;
+	top: 10px;
+	height: 35px;
+	padding: 0 13px;
+	line-height: 35px;
+	font-size: 14px;
+	background: #d35c24;
+	color: #fbc1a5;
+	cursor: pointer;
+	-webkit-app-region: no-drag;
+	z-index: 999;
+}
+
+.right .show_iframe .top_tab div.active{
+	background: #ffe0d2;
+	color: #666;
+}
+
+
+
+
+.right .show_iframe .top_tab .next_pre{
+	position: absolute;
+	right: 7px;
+	width: 59px;
+	border: 1px solid #e6714f;
+	height: 29px;
+	top: 7px;
+	background: #ffffff;
+}
+
+.right .show_iframe .top_tab .next_pre .click_left{
+	width: 29px;
+	height: 29px;
+	border-right: 1px solid #dddddd;
+	overflow: hidden;
+	cursor: pointer;
+	float: left;
+	background: url(../../img/layout/click_left.png) no-repeat center;
+}
+.right .show_iframe .top_tab .next_pre .click_right{
+	width: 29px;
+	height: 29px;
+	overflow: hidden;
+	cursor: pointer;
+	float: right;
+	background: url(../../img/layout/click_right.png) no-repeat center;
+}
+
+
+.right .show_iframe .top_tab .tab_new_add{
+	position: absolute;
+	left: 102px;
+	top: 0px;
+	right: 74px;
+	height: 45px;
+	overflow: hidden;
+}
+
+
+.right .show_iframe .top_tab .tab_new_add ul{ 
+	display: block;
+	position: absolute;
+	top: 10px;
+	height: 35px;
+	
+}
+.right .show_iframe .top_tab .tab_new_add ul li{
+	height: 35px;
+	padding: 0 13px;
+	line-height: 35px;
+	font-size: 14px;
+	background: #d35c24;
+	color: #fbc1a5;
+	border-left: 1px solid #a9491b;
+	float: left;
+	cursor: pointer;
+	-webkit-app-region: no-drag;
+}
+.right .show_iframe .top_tab .tab_new_add ul li span{
+	float: left;
+}
+
+.right .show_iframe .top_tab .tab_new_add ul li i{
+	float: left;
+	width: 20px;
+	height: 35px;
+	background: url(../../img/layout/tab_close.png) no-repeat center;
+}
+
+.right .show_iframe .top_tab .tab_new_add ul li i:hover{
+	background: url(../../img/layout/tab_close_hover.png) no-repeat center;
+}
+.right .show_iframe .top_tab .tab_new_add ul li.active{
+	background: #ffe0d2;
+	color: #666;
+}
+
+.right .show_iframe .top_tab .tab_new_add ul li.active i{
+	background: url(../../img/layout/tab_close_active_hover.png) no-repeat center;
+}
+
+.right .show_iframe .top_tab .tab_new_add ul li.active i:hover{
+	background: url(../../img/layout/tab_close_active_hover.png) no-repeat center;
+}
+
+.right .show_iframe .top_tab .tab_new_add ul li:first-child{
+	/*border-left: none;*/
+}
+
+
+
+
+
+.right .show_iframe .right_top {
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	background: white;
+	box-shadow: 0px 2px 3px #e87256;
+	top: 0px;
+	left: 0px;
+	z-index: 1000;
+}
+
+.right .show_iframe .right_top .top_nav {
+	float: left;
+	height: 36px;
+	padding-top: 8px;
+	overflow-y: hidden;
+	padding-left: 20px;
+}
+
+.right .show_iframe .right_top .top_nav a {
+	line-height: 34px;
+	padding: 0px 20px;
+	font-size: 15px;
+	float: left;
+	color: #666;
+	float: left;
+	margin-right: 10px;
+}
+
+.right .show_iframe .right_top .top_nav a:hover {
+	text-decoration: none;
+}
+
+.right .show_iframe .right_top .top_nav a.active {
+	background: #f38261;
+	line-height: 34px;
+	padding: 0px 20px;
+	/*height: 50px;*/
+	color: #fff;
+	border-radius: 3px;
+}
+
+
+
+.right .show_iframe .right_top .user_set {
+	float: right;
+	height: 50px;
+}
+
+.right .show_iframe .right_top .user_set .ring {
+	height: 50px;
+	float: left;
+	cursor: pointer;
+	position: relative;
+	width: 80px;
+	background: url(../../img/icon/icon_ring.png) no-repeat center;
+}
+
+.right .show_iframe .right_top .user_set .ring .ring_num {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 14px;
+	right: 19px;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	background: #f16b6f;
+	color: white;
+	font-size: 10px;
+	font-family: "arial, helvetica, sans-serif", arial;
+}
+
+
+/*用户信息*/
+
+.right .show_iframe .right_top .user_set .user_box {
+	float: right;
+	height: 50px;
+	padding-left: 65px;
+	padding-right: 20px;
+	border-left: 1px solid #eee;
+	position: relative;
+	cursor: pointer;
+	z-index: 10000;
+}
+
+.right .show_iframe .right_top .user_set .user_box img {
+	display: block;
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	top: 7px;
+	left: 20px;
+}
+
+.right .show_iframe .right_top .user_set .user_box .user_name {
+	line-height: 50px;
+	color: #666;
+	font-size: 14px;
+	padding-right: 25px;
+	background: url(../../img/icon/icon_down_right.jpg) no-repeat center right;
+}
+
+.right .show_iframe .right_top .user_set .user_box .user_nav {
+	position: absolute;
+	display: none;
+	top: 49px;
+	left: -1px;
+	border: 1px solid #eee;
+	border-top: none;
+	background: white;
+	z-index: 999;
+	/*box-shadow: 0px 2px 3px #f2f2f2;*/
+}
+
+.right .show_iframe .right_top .user_set .user_box .user_nav ul {
+	display: block;
+	clear: both;
+	padding-bottom: 10px;
+}
+
+.right .show_iframe .right_top .user_set .user_box .user_nav ul li {
+	display: block;
+	text-align: center;
+	line-height: 30px;
+}
+
+.right .show_iframe .right_top .user_set .user_box .user_nav ul li a {
+	text-decoration: none;
+	display: block;
+}
+
+/*.right .show_iframe iframe {
+	position: absolute;
+	top: 95px;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	verflow-y: auto;
+	overflow-x: hidden;
+	background: #f6f8f9;
+}*/
+
+.right .show_iframe .main_zm{
+	background: white;
+	position: absolute;
+	top: 95px;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	background: #f6f8f9;
+	display: none;
+	padding: 0px;
+}
+.right .show_iframe .main_zm_block{
+	display: block;
+	padding: 0px;
+}
+
+.right .show_iframe .main_zm iframe{
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+
+.right .show_iframe .footer {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+}

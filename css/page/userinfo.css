@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/*
+ * 项目名称:申通国际业务系统
+ * 控制页面:会员中心欢迎页-welcome.html
+ * 开发人员:344822559@qq.com
+ * 开发日期:2017-02-07
+ * */
+
+.panel-body dl{
+	padding-left: 100px;
+	position: relative;
+	min-height: 100px;
+}
+.panel-body dl dt{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	background: #f1c345;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	overflow: hidden;
+}
+.panel-body dl dt img{
+	display: block;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+.panel-body dl dd{
+	padding-top: 10px;
+}

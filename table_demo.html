@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<title>table</title>
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="lib/H-ui/css/H-ui.ie.css" />
+		<script type="text/javascript" src="lib/html5.js"></script>
+		<script type="text/javascript" src="lib/respond.min.js"></script>
+		<script type="text/javascript" src="lib/PIE_IE678.js"></script>
+		<![endif]-->   
+		<link rel="stylesheet" type="text/css" href="lib/H-ui/css/H-ui.min.css" />
+		<link rel="stylesheet" href="css/page/common.css" />
+		<link rel="stylesheet" href="css/layout/table_boot.css" />
+		<script type="text/javascript" src="js/1.9.1/jquery.min.js" ></script>
+		<script type="text/javascript" src="lib/layer/layer.js" ></script>
+		<script type="text/javascript" src="lib/bootstrapTable/bootstrap-table.js"></script>
+		<script type="text/javascript" src="lib/bootstrapTable/bootstrap.min.js"></script>
+		<script type="text/javascript" src="lib/bootstrapTable/bootstrap-table-export.js"></script>
+		<script type="text/javascript" src="lib/bootstrapTable/tableExport.js"></script>
+		<script src="lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+		<!--[if IE 6]>
+		<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+		<script>DD_belatedPNG.fix('*');</script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20 pb-30">
+			<div class="panel-header"><span class="active">新增币种</span></div>
+			<div class="panel-body panel_body_block">
+			<div class="clearfix" style="border: 1px solid #ddd;">
+				<div class="define_box b_bottom_ddd">
+					<button type="button" class="btn btn-default size-M">添加</button>
+					<button type="button" class="btn btn-default size-M">修改</button>
+					<button type="button" class="btn btn-default size-M">删除</button>
+				</div>
+				<table id="table" class="table" data-sort-name="price"  data-sort-order="desc" data-pagination="true">
+					<thead>
+					<tr>
+						<th data-field="state" data-checkbox="true"></th>
+						<th data-field="id" data-align="right" data-width="50" data-sortable="true" data-class="dsad">ID</th>
+						<th data-field="name" data-align="center" data-width="200" data-sortable="true">Name</th>
+						<th data-field="price" data-align="center" data-width="600" data-sortable="true">Price</th>
+						<th data-field="do" data-width="1000">do</th>
+					</tr>
+					</thead>
+				</table>
+			</div>
+			
+			
+			
+			</div>
+		</div>
+			<script type="text/javascript">
+				$('#table').bootstrapTable({
+					url: 'data/data.json',
+					striped: true,
+					height: 400,
+					showRefresh: true, //会出现刷新按钮
+					search: true,
+					clickToSelect: true,
+					pageSize: 10,
+					pageList: [5, 10, 20, 25],
+					showExport: true, //是否显示导出
+					exportTypes:['excel'],
+					exportDataType: "selected", //basic', 'all', 'selected'.
+					//searchText:"搜索",//设置默认搜索
+					searchAlign: "left", //指定搜索框水平方向的位置
+					buttonsAlign: "right",
+					/*操作按钮在水平方向的位置*/
+					paginationHAlign: "left",
+					/*分页条在水平方向的位置*/
+					paginationDetailHAlign: "right",
+					/*分页详细信息在水平方向的位置*/
+					paginationPreText: "上一页",
+					/*指定上一页的内容*/
+					paginationNextText: "下一页",
+					//RowStyle:addClass,//设置自定义行属性 参数为：row: 行数据index: 行下标 返回值可以为class或者css 支持所有自定义属性
+					detailView: true,
+					detailFormatter:function(index, row){
+						//index：行下标
+						//row ：当前行对象
+						/*这里可以写一个方法来调用*/
+						var str=$('#table > tbody > tr[data-index='+index+']').html();
+						$('#table > tbody > tr[data-index='+index+']').next('.detail-view').find('td').html('<a href="#">dsads</a>');
+					}
+						
+				});
+			</script>
+		</div>
+	</body>
+</html>

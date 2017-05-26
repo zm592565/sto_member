@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<title>资料编辑</title>
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="lib/H-ui/css/H-ui.ie.css" />
+		<script type="text/javascript" src="lib/html5.js"></script>
+		<script type="text/javascript" src="lib/respond.min.js"></script>
+		<script type="text/javascript" src="lib/PIE_IE678.js"></script>
+		<![endif]-->   
+		<link rel="stylesheet" type="text/css" href="lib/H-ui/css/H-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/page/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/page/userinfo.css" />
+		<script type="text/javascript" src="js/1.9.1/jquery.min.js" ></script>
+		<script type="text/javascript" src="lib/H-ui/js/H-ui.min.js" ></script>
+		<script type="text/javascript" src="lib/layer/layer.js" ></script>
+		<script type="text/javascript" src="lib/icheck/jquery.icheck.min.js" ></script>
+		<link rel="stylesheet" href="lib/icheck/icheck.css" />
+		<script type="text/javascript">
+			$(function(){
+				$('.skin-minimal input').iCheck({
+					checkboxClass: 'icheckbox-blue',
+					radioClass: 'iradio-blue',
+					increaseArea: '20%'
+				});
+			});
+		</script>
+		<!--[if IE 6]>
+		<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+		<script>DD_belatedPNG.fix('*');</script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20 pb-30">
+			<div class="panel-header"><span class="active">用户资料编辑</span></div>
+			<div class="panel-body panel_body_block">
+				<dl>
+					<dt><img src="img/user_face_80.png"/></dt>
+					<dd>
+						<h6 class="f-12 c-999">会员账号:<cite class="c-666 pl-5">zm592565</cite></h6>
+						<h6 class="f-12 c-999">会员等级:<cite class="c-666 pl-5">VIP2</cite></h6>
+						<h6 class="f-12 c-999">注册日期:<cite class="c-666 pl-5">2016-10-26 14:26:34</cite></h6>
+					</dd>
+				</dl>
+				
+			</div>
+			
+			
+			
+			<div class="panel-title">
+				基本信息编辑
+			</div>
+			<div class="panel-body panel_body_block">
+				<form class="form form-horizontal" id="form-article-add" novalidate="novalidate">
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r"><span class="c-red">*</span>名(First Name)：</label>
+						<div class="formControls col-xs-9 col-sm-9">
+							<input type="text" class="input-text select_w_150" value="" placeholder="仅限英文或拼音">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r"><span class="c-red">*</span>姓(Last Name)：</label>
+						<div class="formControls col-xs-9 col-sm-9">
+							<input type="text" class="input-text select_w_150" value="" placeholder="仅限英文或拼音">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r"><span class="c-red">*</span>E-mail：</label>
+						<div class="formControls col-xs-4 col-sm-5">
+							<input type="text" class="input-text width_250" value="" placeholder="合法邮箱地址">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20">证件类型：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<span class="select-box width_200">
+								<select name="articlecolumn" class="select">
+									<option value="0">身份证</option>
+								</select>
+							</span>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r">证件姓名：</label>
+						<div class="formControls col-xs-4 col-sm-5">
+							<input type="text" class="input-text width_200" value="" placeholder="请输入证件上的姓名">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r">证件号码：</label>
+						<div class="formControls col-xs-4 col-sm-5">
+							<input type="text" class="input-text width_250" value="" placeholder="">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20"><span class="c-red">*</span>手机号码：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" class="input-text width_80" value="" placeholder="+86">
+							<input type="text" class="input-text select_w_150" value="" placeholder="">
+						</div>
+					</div>
+					
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20"></label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<button class="btn btn-warning radius size-L" type="submit">保存信息</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			
+			
+			
+			<!--
+            	作者：344822559@qq.com
+            	时间：2017-02-08
+            	描述：收货地址簿
+            -->
+			
+		</div>
+	</body>
+</html>

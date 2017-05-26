@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<title>新增币种</title>
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="lib/H-ui/css/H-ui.ie.css" />
+		<script type="text/javascript" src="lib/html5.js"></script>
+		<script type="text/javascript" src="lib/respond.min.js"></script>
+		<script type="text/javascript" src="lib/PIE_IE678.js"></script>
+		<![endif]-->   
+		<link rel="stylesheet" type="text/css" href="lib/H-ui/css/H-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/page/common.css" />
+		<script type="text/javascript" src="js/1.9.1/jquery.min.js" ></script>
+		<script type="text/javascript" src="lib/layer/layer.js" ></script>
+		<script type="text/javascript" src="lib/laydate/laydate.js" ></script>
+		<script type="text/javascript" src="lib/icheck/jquery.icheck.min.js" ></script>
+		<script type="text/javascript" src="lib/datarange/moment.min.js" ></script>
+		<script type="text/javascript" src="lib/datarange/jquery.daterangepicker.min.js" ></script>
+		<link rel="stylesheet" href="lib/datarange/daterangepicker.min.css" />
+		<link rel="stylesheet" href="lib/selectSearch/jquery.searchableSelect.css" />
+		<script type="text/javascript" src="lib/selectSearch/jquery.searchableSelect.js" ></script>
+		<link rel="stylesheet" href="lib/icheck/icheck.css" />
+		<script type="text/javascript">
+			$(function(){
+				$('.skin-minimal input').iCheck({
+					checkboxClass: 'icheckbox-blue',
+					radioClass: 'iradio-blue',
+					increaseArea: '20%'
+				});
+			});
+		</script>
+		<!--[if IE 6]>
+		<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+		<script>DD_belatedPNG.fix('*');</script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20 pb-30">
+			<div class="panel-header"><span class="active">新增币种</span></div>
+			<div class="panel-body panel_body_block">
+				<form class="form form-horizontal" id="form-article-add" novalidate="novalidate">
+					<div class="row cl">
+						
+						
+						<input id="date-range16" class="input-text" type="text"></input>
+							
+						
+						<div class="select-box">
+							<select id="search_select" class="select" size="1" name="demo1">
+								<option value="" selected="">默认select</option>
+								<option value="1">菜单一</option>
+								<option value="2">菜单二</option>
+								<option value="3">菜单三</option>
+								<option value="1">菜单一</option>
+								<option value="2">菜单二</option>
+								<option value="3">菜单三</option>
+								<option value="1">菜单一</option>
+								<option value="2">菜单二</option>
+								<option value="3">菜单三</option>
+								<option value="1">菜单一</option>
+								<option value="2">菜单二</option>
+								<option value="3">菜单三</option>
+								<option value="1">菜单一</option>
+								<option value="2">菜单二</option>
+								<option value="3">菜单三</option>
+								<option value="1">菜单一</option>
+								<option value="2">菜单二</option>
+								<option value="3">菜单三</option>
+								<option value="1">菜单一</option>
+								<option value="2">菜单二</option>
+								<option value="3">菜单三</option>
+								<option value="1">菜单一</option>
+								<option value="2">菜单二</option>
+								<option value="3">菜单三</option>
+								<option value="1">菜单一</option>
+								<option value="2">菜单二</option>
+								<option value="3">菜单三</option>
+							</select>
+						</div>
+						
+					</div>
+					
+					<script>
+						
+							$('#date-range16').dateRangePicker(
+								{
+									showShortcuts: false,/*是否需要点击确定按钮*/
+									format: 'YYYY-MM-DD',
+									language:'cn',
+									separator: " 至 ",
+									showWeekNumbers : false, //是否显示第几周
+									startDate: '2017-05-26',/*日期选择的初始值*/
+									endDate: '2017-05-30',/*日期选择的初始值*/
+								
+								}).bind('datepicker-change', function(evt, obj) {
+									/*绑定事件变化*/
+	//								alert('date1: ' + obj.date1 + ' / date2: ' + obj.date2);/*获取事件的开始和结束值*/
+									alert(obj.date2)
+									
+//									console.info(obj.getDate())
+								});
+							
+							
+							$(function(){
+								
+								
+								
+								$('#search_select').searchableSelect();
+							});
+					    
+							
+						
+					</script>
+					
+					
+				</form>
+			</div>
+			
+			
+			
+			<!--
+            	作者：344822559@qq.com
+            	时间：2017-02-08
+            	描述：收货地址簿
+            -->
+			
+		</div>
+	</body>
+</html>

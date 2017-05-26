@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<title>布局首页</title>
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="lib/H-ui/css/H-ui.ie.css" />
+		<script type="text/javascript" src="lib/html5.js"></script>
+		<script type="text/javascript" src="lib/respond.min.js"></script>
+		<script type="text/javascript" src="lib/PIE_IE678.js"></script>
+		<![endif]-->   
+		<link rel="stylesheet" href="css/layout/global.css" />
+		<link rel="stylesheet" type="text/css" href="lib/H-ui/css/H-ui.min.css" />
+		<link rel="stylesheet" href="css/layout/layout.css" />
+		<script type="text/javascript" src="js/1.9.1/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/layout/box.js" ></script>
+		<script type="text/javascript" src="lib/layer/layer.js" ></script>
+		<!--[if IE 6]>
+		<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+		<script>DD_belatedPNG.fix('*');</script>
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="lib/scroll/style/jquery.jscrollpane.css"/>
+		<script type="text/javascript" src="lib/scroll/script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="lib/scroll/script/jquery.jscrollpane.min.js"></script>
+		<style type="text/css">
+			.left_box{
+				overflow-y: auto;
+				position: relative;
+			}
+		</style>
+		<script type="text/javascript">
+		$(function()
+		{
+			var bars = '.jspHorizontalBar, .jspVerticalBar';
+		
+			$('.left_box').bind('jsp-initialised', function (event, isScrollable) {
+				
+				//hide the scroll bar on first load
+				$(this).find(bars).hide();
+			
+			}).jScrollPane().hover(
+			
+				//hide show scrollbar
+				function () {
+					$(this).find(bars).stop().fadeTo('fast', 0.9);
+				},
+				function () {
+					$(this).find(bars).stop().fadeTo('fast', 0);
+				}
+
+			);				
+
+		});
+		</script>
+	</head>
+	<body>
+		<div id="content">	
+			<div class="left">
+				<div class="logo"></div>
+				<div class="left_box">
+					<div class="nav_box nav_box_block" id="scrollbar">
+						<div class="nav clearfix">
+							<p class="person"><a class="active" href="javascript:;">常用操作</a></p>
+							<ul class="active clearfix">
+								<!--<a href="javascript:;" _href="fast_send.html">极速发货</a>
+								<a href="javascript:;" _href="forecast_storage.html">仓储预报</a>
+								<a href="javascript:;" _href="bulk_operation.html">批量导入</a>
+								<a href="javascript:;" _href="bulk_info.html">导入确认</a>-->
+								
+								<a title="总部业务" onclick="addTopTab('table_demo.html','总部业务','company')" href="javascript:;">币种管理</a>
+								<a title="1231" onclick="addTopTab('test.html','网易','163')" href="javascript:;">汇率管理</a>
+								<a title="78979" onclick="addTopTab('test.html','新浪','sina')" href="javascript:;">结算规则</a>
+								<a title="78979" onclick="addTopTab('test.html','申通','sto')" href="javascript:;">结算规则</a>
+								<a title="78979" onclick="addTopTab('test.html','国际申通','intl')" href="javascript:;">结算规则</a>
+								
+							</ul>
+						</div>
+						<div class="nav clearfix">
+							<p class="person"><a href="javascript:;">个人信息</a></p>
+							<ul class="clearfix">
+								<a href="javascript:;" _href="user_info.html">资料编辑</a>
+								<a href="javascript:;" _href="adress_book.html">收货地址</a>
+								<a href="javascript:;" _href="updata_password.html">密码管理</a>
+								<a href="javascript:;" _href="topPay.html">账号充值</a>
+								<a href="javascript:;" _href="cash.html">账号提现</a>
+								<a href="javascript:;" _href="deal.html">交易明细</a>
+							</ul>
+						</div>
+					</div>
+					<div class="nav_box">
+						<div class="nav clearfix">
+							<p class="person"><a class="active" href="javascript:;">仓储管理</a></p>
+							<ul class="active clearfix">
+								<a href="javascript:;" _href="fast_send.html">极速发货</a>
+								<a href="javascript:;" _href="forecast_storage.html">仓储预报</a>
+								<a href="javascript:;" _href="bulk_operation.html">批量导入</a>
+								<a href="javascript:;" _href="warehouse_list.html">仓储管理</a>
+							</ul>
+						</div>
+						<div class="nav clearfix">
+							<p class="person"><a href="javascript:;">记录查询</a></p>
+							<ul class="clearfix">
+								<a href="javascript:;" _href="My_parcel.html">我的包裹</a>
+								<a href="javascript:;" _href="derelict.html">退弃货记录</a>
+								<a href="javascript:;" _href="warehouse_service.html">仓内服务记录</a>
+							</ul>
+						</div>
+					</div>
+					<div class="nav_box">
+						<div class="nav clearfix">
+							<p class="person"><a class="active" href="javascript:;">客户服务</a></p>
+							<ul class="active clearfix">
+								<a href="javascript:;" _href="tariff_pay.html">关税支付</a>
+								<a href="javascript:;" _href="tariff_query.html">税单查询</a>
+								<a href="javascript:;" _href="complaints.html">投诉建议</a>
+								<a href="javascript:;" _href="claims.html">理赔记录</a>
+							</ul>
+						</div>
+						
+					</div>
+					<div class="nav_box">
+						<div class="nav clearfix">
+							<p class="person"><a class="active" href="javascript:;">个人信息</a></p>
+							<ul class="active clearfix">
+								<a href="javascript:;" _href="user_info.html">资料编辑</a>
+								<a href="javascript:;" _href="adress_book.html">收货地址</a>
+								<a href="javascript:;" _href="updata_password.html">密码管理</a>
+								<a href="javascript:;" _href="topPay.html">账号充值</a>
+								<a href="javascript:;" _href="cash.html">账号提现</a>
+								<a href="javascript:;" _href="deal.html">交易明细</a>
+							</ul>
+						</div>
+						
+					</div>
+					<div class="nav_box">
+						<div class="nav clearfix">
+							<p class="person"><a class="active" href="javascript:;">管理平台</a></p>
+							<ul class="active clearfix">
+								<a href="javascript:;" _href="offer_money.html">报价规则</a>
+								<a href="javascript:;" _href="back_service.html">服务管理中的回复</a>
+								<a href="javascript:;" _href="test_lib.html">组件库</a>
+							</ul>
+						</div>
+						
+					</div>
+				</div>
+				<img class="btn_tel" src="img/btn_tel.png" />
+			</div>
+			<!--
+            	描述：左侧导航栏结束
+            -->
+			<div class="right">
+				<div class="show_iframe clearfix">
+					<div class="right_top">
+						<!--<div class="top_index active" title="welcome.html">首页</div>-->
+						<div class="top_nav">
+							<a class="active" onclick="addTopTab('send.html','极速发货','fastsend')" href="JavaScript:;">极速发货</a>
+							<!--<a href="javascript:;">仓储转运</a>
+							<a href="javascript:;">客户服务</a>
+							<a href="javascript:;">账户设置</a>
+							<a href="javascript:;">管理平台页面</a>-->
+						</div>
+						<div class="user_set">
+							<div class="ring">
+								<div class="ring_num">20</div>
+							</div>
+							<div class="user_box">
+								<img src="img/user_face.png" />
+								<div class="user_name">zm592565</div>
+								<div class="user_nav">
+									<ul>
+										<li><a href="#">编辑资料</a></li>
+										<li><a href="#">安全退出</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					
+					
+					<div class="top_tab">
+						<div class="tab_home active" data-src="welcome.html" tag="home">我的桌面</div>
+						<div class="tab_new_add">
+							<ul></ul>
+						</div>
+						<div class="next_pre">
+							<div class="click_left"></div>
+							<div class="click_right"></div>
+						</div>
+					</div>
+					<div class="main_zm main_zm_block" tag="home">
+						<iframe scrolling="yes" frameborder="0" src="welcome.html"></iframe>
+					</div>
+					
+					
+					<div class="footer">
+						版权所有：申通集团股份有限公司　　申通快递有限公司：上海市青浦区赵重公路1888号　　邮编：201706　　沪ICP备13037807号-1
+					</div>
+				</div>
+				
+			</div>
+			<!--
+            	描述：右侧内容box结束
+            -->
+		</div>
+		
+	</body>
+</html>
